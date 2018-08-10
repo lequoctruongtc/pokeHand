@@ -14,7 +14,6 @@ class Poke
 		for($i = 1;$i < 10;$i = $i+2) {
 			$arr[] = substr($this->stringPoke, $i, 1);
 		}
-		echo '<pre>';
 		$arrPoke = array();
 		foreach ($arr as $key => $value) {
 			if (in_array($value, array_keys($arrPoke))) {
@@ -24,7 +23,7 @@ class Poke
 			}
 		}
 		if (count($arrPoke) == 2) {
-			foreach ($arr as $key => $value) {
+			foreach ($arrPoke as $key => $value) {
 				if ($value == 4) {
 					return '4C';
 				} else if ($value == 3){
@@ -58,4 +57,3 @@ class Poke
 // $poke = new Poke('D4C4C8D8S4');
 $poke = new Poke('S8D3HQS3CQ');
 echo $poke->validPokeHand();
-
